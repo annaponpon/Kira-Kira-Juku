@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* ベースのスタイル
+------------------------------------------ */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  line-height: 1.75;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a,
+a:hover,
+a i {
+  transition: all 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 部品
+------------------------------------------ */
+/* flexbox */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outfitフォント */
+.outfit {
+  font-family: Outfit, sans-serif;
+}
+
+/* 文字の太さmedium */
+.medium {
+  font-weight: 500;
+}
+
+/* 各セクションの左右の余白 */
+.business,
+.works,
+.news,
+.contact {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+/* コンテナ */
+.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 67.5rem;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+/* セクションタイトル */
+.section-title {
+  margin-bottom: 2.5rem;
+  font-size: 2.1875rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    margin-bottom: 3rem;
+  }
+}
+
+/* ボタン */
+.button {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 3rem;
+}
+
+.button-icon {
+  position: absolute;
+  top: 46%;
+  right: 1.125rem;
+  line-height: 1;
+  transform: translate(0%, -50%);
+}
+
+@media (min-width: 768px) {
+  .button-icon {
+    top: 50%;
+    right: 1.25rem;
+  }
+}
+
+.button:hover .button-icon {
+  margin-right: -0.5625rem;
+}
+
+/* オレンジ色ボタン */
+.button-orange {
+  max-width: 18.75rem;
+  padding: .8rem 1rem .725rem;
+  margin: 2.125rem auto 0;
+  background-color: #ec6a00;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .button-orange {
+    margin: 2.75rem auto 0;
+    padding: .9rem 0;
+  }
+}
+
+.button-orange:hover {
+  background-color: #554b9c;
+}
+
+.button-orange-icon {
+  font-size: 2.375rem;
+}
+
+/* 白色ボタン */
+.button-white-ghost {
+  width: 21.875rem;
+  padding-top: 1rem;
+  padding-bottom: 1.275rem;
+  font-size: 1.25rem;
+  border: .125rem solid #fff;
+}
+
+@media (min-width: 768px) {
+  .button-white-ghost {
+    width: 31.25rem;
+  }
+}
+
+.button-white-ghost:hover {
+  color: #554b9c;
+  background-color: #fff;
+}
+
+.button-white-ghost-icon {
+  font-size: 2.5625rem;
+  top: 2.1875rem;
+  right: 1.5rem;
+  transform: translate(0%, -50%);
+}
+
+@media (min-width: 768px) {
+  .button-white-ghost-icon {
+    right: 1rem;
+  }
+}
+
+
+
+
+
