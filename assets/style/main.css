@@ -194,11 +194,11 @@ ul {
 @media (max-width: 767px) {
   .hamburger-menu {
     position: fixed;
-    top: 5rem;
+    top: 4.375rem;
     left: 0;
     width: 100%;
-    height: calc(100vh - 5rem);
-    background-color: #fff;
+    height: calc(100vh - 32rem);
+    background-color: #005BAC;
     transition: all 0.6s;
     transform: translateX(100%);
   }
@@ -211,16 +211,18 @@ ul {
 
 /* ナビゲーション */
 @media (max-width: 767px) {
-  .hamburger-menu-list-group {
+  .hamburger-nav-list {
     display: table;
     width: 100vw;
-    font-size: 1.875rem;
-    border-top: 0.0625rem solid #000;
+    font-size: 1.125rem;
+    color: #fff;
+    font-size: medium;
+    border-top: 0.0625rem solid #fff;
   }
 }
 
 @media (min-width: 768px) {
-  .header-nav-list-group {
+  .header-nav-list {
     column-gap: 1.56rem;
     height: 100%;
     padding-right: 1.6rem;
@@ -229,32 +231,32 @@ ul {
 }
 
 @media (max-width: 767px) {
-  .hamburger-menu-list-group a {
+  .hamburger-nav-list a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 1.72rem 2rem;
     line-height: 1;
     border-bottom: 0.0625rem solid #000;
   }
 
-  .hamburger-menu-list-group li:nth-child(4) a,
-  .hamburger-menu-list-group li:nth-child(5) a {
+  .hamburger-nav-list li:nth-child(4) a,
+  .hamburger-nav-list li:nth-child(5) a {
     padding: 1.5rem 2rem 1.95rem;
   }
 
-  .hamburger-menu-list-group li:nth-child(4) a::after,
-  .hamburger-menu-list-group li:nth-child(5) a::after {
+  .hamburger-nav-list li:nth-child(4) a::after,
+  .hamburger-nav-list li:nth-child(5) a::after {
     padding-top: .25rem;
   }
 }
 
 /* 右矢印アイコン */
 @media (max-width: 767px) {
-  .hamburger-menu-list-group a::after {
+  .hamburger-nav-list a::before {
     font-family: bootstrap-icons;
-    font-size: 1.5rem;
-    content: "\F285";
+    font-size: 1.625rem;
+    content: "\F135";
+    color: #fff;
   }
 }
 
