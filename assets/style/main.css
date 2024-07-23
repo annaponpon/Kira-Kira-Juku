@@ -209,15 +209,17 @@ ul {
   transform: translateX(0);
 }
 
+.hamburger-nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* ナビゲーション */
 @media (max-width: 767px) {
   .hamburger-nav-list {
     display: table;
-    width: 100vw;
+    width: calc(100vw - 2rem);
     font-size: 1.125rem;
-    color: #fff;
-    font-size: medium;
-    border-top: 0.0625rem solid #fff;
   }
 }
 
@@ -234,19 +236,11 @@ ul {
   .hamburger-nav-list a {
     display: flex;
     align-items: center;
-    padding: 1.72rem 2rem;
-    line-height: 1;
-    border-bottom: 0.0625rem solid #000;
-  }
-
-  .hamburger-nav-list li:nth-child(4) a,
-  .hamburger-nav-list li:nth-child(5) a {
-    padding: 1.5rem 2rem 1.95rem;
-  }
-
-  .hamburger-nav-list li:nth-child(4) a::after,
-  .hamburger-nav-list li:nth-child(5) a::after {
-    padding-top: .25rem;
+    line-height: 2.55;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
   }
 }
 
@@ -257,8 +251,21 @@ ul {
     font-size: 1.625rem;
     content: "\F135";
     color: #fff;
+    margin-right: 0.3125rem;
   }
 }
+
+.button-white {
+  background-color: #fff;
+  color: #005BAC;
+  font-size: 1.125rem;
+  padding: 1rem;
+  width: 21.875rem;
+  margin: 2.125rem auto;
+}
+
+
+
 
 @media (min-width: 768px) {
   .header-nav a:hover {
@@ -445,7 +452,7 @@ h3 .big-numbers {
 
 /* ボタン */
 .button-blue {
-  background-color: #0271E0;
+  background: linear-gradient(to right, #0271E0, #53A2F0);
   max-width: 19.375rem;
   padding: 1.0625rem 1rem 1.125rem;
   margin: 0.625rem auto 0;
@@ -552,12 +559,22 @@ h3 .big-numbers {
   padding-top: 2.875rem;
 }
 
+.collapse{
+  border-collapse: collapse;
+}
 
 thead {
   background-color: #F5F5F5;
   height: 4.0625rem;
 }
 
+.border-right-none {
+  border-right: none;
+}
+
+.border-left-none {
+  border-left: none;
+}
 
 
 table{
@@ -568,7 +585,7 @@ table{
 }
 table th,
 table td{
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   padding: 8px;
   font-weight: 400;
 }
@@ -579,12 +596,53 @@ table td {
   text-align: center;
 }
 
-.collapse{
-  border-collapse: collapse;
+
+
+
+/* よくあるご質問
+------------------------------------------ */
+.qa {
+  position: relative;
+}
+
+.qa .title {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  color: #FFF;
+  font-size: 1.375rem;
+}
+
+.qa img {
+  filter: brightness(0.7);
 }
 
 
+/* お近くの教室を探す
+------------------------------------------ */
+.classrooms {
+  position: relative;
+}
 
+.classrooms .title {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  color: #FFF;
+  font-size: 1.375rem;
+}
 
+.classrooms img {
+  filter: brightness(0.7);
+}
 
+/* フッター
+------------------------------------------ */
+.footer {
+  padding: 1.75rem;
+  background-color: #DDDDDD;
+}
 
+.footer-copyrigth {
+  text-align: center;
+}
