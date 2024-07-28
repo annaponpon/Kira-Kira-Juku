@@ -17,3 +17,20 @@ $(window).on('resize', function () {
 $('#smarttab').smartTab({
   enableUrlHash: false // タブidにもとづいたURLハッシュの付与を無効
 });
+
+var buttonToTop = $('#button-to-top');
+var position = 0;
+var speed = 600;
+
+// ページトップへ戻るボタンをクリックしたら
+buttonToTop.on('click', function() {
+  // console.log('click');
+  console.log(position);
+
+  // アニメーションをしながらページトップに移動
+  $("html, body").animate({
+    scrollTop: position
+  }, speed, "swing");
+  return false;
+
+});
