@@ -310,13 +310,6 @@ ul {
   }
 }
 
-@media (max-width: 1700px) {
-  .cover-content {
-    top: 8.75rem;
-    left: 26.25rem;
-  }
-
-}
 
 .cover-top-group {
   display: flex;
