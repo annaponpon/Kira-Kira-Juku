@@ -265,6 +265,11 @@ ul {
 }
 
 
+/* スムーススクロール */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3.125rem;
+}
 
 
 /* カバー
