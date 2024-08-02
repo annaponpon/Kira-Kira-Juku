@@ -705,6 +705,12 @@ table td {
   text-align: center;
 }
 
+.yen {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: noto sans jp;
+}
+
 
 
 
@@ -736,10 +742,6 @@ table td {
 
 @media (min-width: 768px) {
   .qa img {
-    display: none;
-  }
-  .qa {
-    background-image: url(/assets/image/qa_pc.jpg);
     width: 960px;
     height: 320px;
   }
@@ -784,10 +786,6 @@ table td {
 
 @media (min-width: 768px) {
   .classrooms img {
-    display: none;
-  }
-  .classrooms {
-    background-image: url(/assets/image/classrooms_pc.jpg);
     width: 960px;
     height: 320px;
   }
