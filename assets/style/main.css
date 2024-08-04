@@ -24,6 +24,8 @@ ul {
   list-style: none;
 }
 
+
+
 /* 部品
 ------------------------------------------ */
 
@@ -42,15 +44,12 @@ ul {
 }
 /* コンテナ */
 .container {
-  padding: .875rem 1rem 0;
-  max-width: 67.5rem;
   margin: auto;
 }
 
 
 /* セクションタイトル */
 .section-title {
-  margin-bottom: 0.875rem;
   font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
@@ -58,7 +57,8 @@ ul {
 
 @media (min-width: 768px) {
   .section-title {
-    margin-bottom: 2.25rem;
+    margin-bottom: 1.4375rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -82,35 +82,27 @@ ul {
 }
 
 
-
-
-
-.button:hover .button-icon {
-  margin-right: -0.5625rem;
-}
-
-
-
-
 /* ヘッダー
 ------------------------------------------ */
 .header {
   position: fixed;
   top: 0;
-  left: 1rem;
+  left: 0;
   right: 0;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 24.375rem;
 }
 
 @media (min-width: 768px) {
   .header {
-    padding-top: .625rem;
-    max-width: 75rem;
+    width: 120rem;
     height: 6.3125rem;
-    margin-inline: auto;
+    padding: 0 22.5rem;
   }
 
   .header a {
@@ -121,12 +113,16 @@ ul {
 /* ロゴ */
 .header-logo {
   line-height: 1;
+  margin-left: 1rem;
 }
+
 
 @media (min-width: 768px) {
   .header img  {
     width: 15.0625rem;
     height: 2.8125rem;
+    margin-left: 0.3125rem;
+    margin-bottom: 0.1875rem;
   }
 }
 
@@ -134,9 +130,9 @@ ul {
 
 /* ハンバーガーボタン */
 .hamburger-button {
-  width: 4.375rem;
-  height: 4.375rem;
-  font-size: 3.125rem;
+  width: 73px;
+  height: 73px;
+  font-size: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,6 +171,7 @@ ul {
   .hamburger-menu {
     display: flex;
     flex-direction: row;
+    padding-right: 1.25rem;
   }
 }
 
@@ -186,6 +183,13 @@ ul {
 .hamburger-nav {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hamburger-nav {
+    padding-left: 0;
+    padding-right: 1.75rem;
+  }
 }
 
 
@@ -202,9 +206,9 @@ ul {
 @media (min-width: 768px) {
   .hamburger-nav-list {
     display: flex;
-    column-gap: 1.56rem;
+    column-gap: 1.375rem;
     font-size: 1.25rem;
-    margin-top: 3.75rem;
+    margin-top: 3.4375rem;
   }
 }
 
@@ -258,8 +262,8 @@ ul {
 @media (min-width: 768px) {
   .button-white {
     background: linear-gradient(to right, #0271E0, #53A2F0);
-    max-width: 19.375rem;
-    padding: 1.0625rem 1rem 1.125rem;
+    max-width: 17.625rem;
+    padding: 0.8125rem 0;
     font-size: 1.25rem;
   }
 }
@@ -278,23 +282,24 @@ html {
 .cover {
   height: 20.625rem;
   background-image: url("/assets/image/cover_mainvisual_sp.jpg");
-  background-position: center;
-  background-size: 100%;
+  background-position: -0.9375rem 2.5rem;
+  background-size: 104%;
   position: relative;
   margin-top: 1.875rem;
-  margin-bottom: 9.375rem;
+  margin-bottom: 10.5625rem;
 }
 
 @media (min-width: 768px) {
   .cover {
     background-image: url("/assets/image/cover_mainvisual_pc.jpg");
-    height: 40.6875rem;
+    height: 43.125rem;
   }
 }
 
 @media (min-width: 768px) {
   .cover {
-    margin-top: 7.5rem;
+    margin-top: 3.875rem;
+    margin-bottom: 6.25rem;
   }
 }
 
@@ -303,20 +308,28 @@ html {
 /* カバーテキスト */
 .cover-content {
   position: absolute;
-  top: 4.6875rem;
-  left: 1rem;
+  top: 4.625rem;
+  left: 0.9375rem;
 }
 
 @media (min-width: 768px) {
   .cover-content {
-    top: 8.75rem;
-    left: 26.25rem;
+    top: 9.0625rem;
+    left: 25.6875rem;
   }
 }
 
 
 .cover-top-group {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .cover-top-group-item {
+    margin-top: 0.3125rem;
+    margin-left: 1.1875rem;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -327,6 +340,7 @@ html {
   .frame-right {
     width: 3.2875rem;
     height: 9.375rem;
+    margin-left: 1.3125rem;
   }
 }
 
@@ -346,12 +360,14 @@ html {
   color: #F11F8D;
   font-weight: 800;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 @media (min-width: 768px) {
   .cover-top-group-item-text {
     font-size: 3.375rem;
+    margin-top: 0.0625rem;
+    margin-left: 0.625rem;
   }
 }
 
@@ -366,7 +382,8 @@ html {
 }
 
 .cover-bottom {
-  margin-top: 1rem;
+  margin-top: 1.125rem;
+  margin-left: 0.0625rem;
 }
 
 .cover-bottom-title {
@@ -384,7 +401,8 @@ html {
   font-size: 1.5625rem;
   color: #005BAC;
   font-weight: 1000;
-  line-height: 1.5;
+  line-height: 1.45;
+  margin-top: -0.1875rem;
 }
 
 @media (min-width: 768px) {
@@ -396,7 +414,7 @@ html {
 @media (min-width: 768px) {
   .cover-bottom {
     position: relative;
-    padding-left: 1.875rem;
+    margin-top: 1.6875rem;
   }
 }
 
@@ -405,14 +423,14 @@ html {
 ------------------------------------------ */
 .navigation {
   position: absolute;
-  top: 20.625rem;
-  left: 6.6875rem;
+  top: 19rem;
+  left: 3.9375rem;
 }
 
 @media (min-width: 768px) {
   .navigation {
-    top: 38.75rem;
-    left: 37.5rem;
+    top: 40.8125rem;
+    left: 25.5625rem;
     font-size: 1.5rem;
   }
 }
@@ -420,8 +438,16 @@ html {
 /* ナビゲーションボタン */
 .navigation .button {
   max-width: 15.625rem;
-  padding: 0.5625rem 1rem .725rem;
-  margin: 0.625rem auto 0;
+  padding: 0.5625rem 3.3125rem 0.6875rem;
+  margin: 10px auto 12px;
+}
+
+@media (min-width: 768px) {
+  .navigation .button {
+    max-width: 100%;
+    padding: 1rem 3.9375rem;
+    margin: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -429,7 +455,7 @@ html {
     margin: 0;
     display: flex;
     flex-direction: row;
-    column-gap: 1.875rem;
+    column-gap: 2.375rem;
   }
 }
 
@@ -445,12 +471,28 @@ html {
   background-color: #3AC8AD;
 }
 
+@media (min-width: 768px) {
+  .button-mossgreen {
+    width: 21.375rem;
+  }
+}
+
 
 
 
 
 /* 選ばれる3つの理由
 ------------------------------------------ */
+.reason .container {
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .reason .container {
+    padding: 0 23.75rem 1.5rem;
+  }
+}
+
 .reason .section-title span {
   font-size: 2.5rem;
   color: #F11F8D;
@@ -462,32 +504,56 @@ html {
   }
 }
 
+.reason-group {
+  margin-top: 0.625rem;
+}
+
 @media (min-width: 768px) {
   .reason-group {
-    display: flex
+    display: flex;
+    margin-bottom: 3rem;
   }
   .reason2-group {
     flex-direction: row-reverse;
   }
 }
 
+@media (min-width: 768px) {
+  .reason2-group .reason-description-group {
+    margin: 0 2.5rem 0 0;
+  }
+}
+
+img.reason {
+  width: 21.4375rem;
+  height: 13.75rem;
+}
+
+@media (min-width: 768px) {
+  img.reason {
+    width: 35rem;
+    height: 21.625rem;
+  }
+}
 
 /* ポイント */
 h3 {
   font-size: 1.5rem;
   color: #F11F8D;
   line-height: 1.2;
-  margin-top: .8125rem;
+  margin-top: 0.75rem;
 }
 
 @media (min-width: 768px) {
   h3 {
     font-size: 1.75rem;
+    margin-top: 0.3125rem;
   }
 }
 
 h3 .big-numbers {
   font-size: 2.25rem;
+  margin-left: 0.125rem;
 }
 
 @media (min-width: 768px) {
@@ -496,29 +562,37 @@ h3 .big-numbers {
   }
 }
 
+@media (min-width: 768px) {
+  .reason-description-group {
+    margin-left: 2.5rem;
+  }
+}
+
 /* reasonタイトル */
 .reason-title {
   font-size: 1.25rem;
-  line-height: normal;
-  margin-top: .1875rem;
+  line-height: 1.42;
+  margin-top: 0.25rem;
 }
 
 @media (min-width: 768px) {
   .reason-title {
     font-size: 1.5rem;
+    margin-top: 0.0625rem;
+    line-height: 1.75;
   }
 }
 
 /* reason本文 */
 .reason-description {
-  letter-spacing: .0625rem;
-  margin-top: 1.0625rem;
-  margin-bottom: 2.1875rem;
+  margin-top: 0.625rem;
+  margin-bottom: 2.125rem;
 }
 
 @media (min-width: 768px) {
   .reason-description {
     font-size: 1rem;
+    margin-top: 0.875rem;
   }
 }
 
@@ -528,12 +602,16 @@ h3 .big-numbers {
 ------------------------------------------ */
 .admissions-information-session {
   background-color: #FFEDED;
-  padding-top: 2.3125rem;
+  padding-top: 2.375rem;
   padding-bottom: 2.5rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
+  .admissions-information-session {
+    padding-top: 3.375rem;
+    padding-bottom: 3.5625rem;
+  }
   .admissions-information-session br {
     display: none;
   }
@@ -542,27 +620,50 @@ h3 .big-numbers {
 /* ボタン */
 .button-blue {
   background: linear-gradient(to right, #0271E0, #53A2F0);
-  max-width: 19.375rem;
-  padding: 1.0625rem 1rem 1.125rem;
+  max-width: 19.0625rem;
+  padding: 1.0625rem 1.0625rem 1.0625rem;
   margin: 0.625rem auto 0;
   font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
   .button-blue {
-    max-width: 19.375rem;
-    padding: 1.0625rem 1rem 1.125rem;
+    max-width: 22.375rem;
+    padding: 1rem 0;
     font-size: 1.5rem;
+    margin-top: 1.125rem;
   }
-
+  .button-blue span {
+    margin-left: 1.375rem;
+  }
 }
+
+
 
 /* コース・目的
 ------------------------------------------ */
 
 .course .container {
   padding-top: 3.75rem;
-  padding-bottom: 4.0625rem;
+  padding-bottom: 5.5625rem;
+}
+
+@media (min-width: 768px) {
+  .course .container {
+    padding: 4.125rem 23.75rem 4.5rem;
+  }
+}
+
+
+.course .section-title {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .course .section-title {
+    margin-left: 0;
+    margin-bottom: 1.875rem;
+  }
 }
 
 /* タブ */
@@ -576,8 +677,22 @@ h3 .big-numbers {
   flex-direction: row !important;
 }
 
+@media (min-width: 768px) {
+  .tab.st>.nav {
+    column-gap: 2.25rem;
+  }
+}
+
 .tab.st-theme-basic>.nav {
   box-shadow: none;
+  margin-top: 1rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .tab.st-theme-basic>.nav {
+    padding-inline: 0;
+  }
 }
 
 .tab.st-theme-basic>.nav .nav-link {
@@ -611,14 +726,29 @@ h3 .big-numbers {
 /* タブコンテンツ */
 .tab-content {
   background-color: #fff;
-  border-radius: 0 0 1.25rem 1.25rem;
 }
 
+@media (min-width: 768px) {
+  .tab.st-theme-basic>.tab-content {
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
+
+}
 .tab.st-theme-basic>.tab-content>.tab-pane {
+  display: flex;
   flex-direction: column;
-  row-gap: 22.4px;
-  padding: 2rem .125rem 1.6rem;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.5625rem;
+  padding: 1.75rem 1rem 1.6rem;
   background-color: #F2F9FF;
+}
+
+@media (min-width: 768px) {
+  .tab.st-theme-basic>.tab-content>.tab-pane {
+    row-gap: 2.25rem;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -627,27 +757,57 @@ h3 .big-numbers {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 3.75rem 2.25rem;
+    padding: 2rem 2rem 1.625rem;
+  }
+
+  .course-tab-content-item {
+    width: calc(50% - 1.125rem);
   }
 }
+
+img.expansion {
+  width: 21.4375rem;
+  height: 13.75rem;
+}
+
+
+
 
 /* タイトル */
 .bi-arrow-right-short {
-  font-size: 1.5625rem;
+  font-size: 1.75rem;
   line-height: 1;
   color: #005BAC;
-}
-
-.course-tab-content-title {
-  font-size: 1.25rem;
-  margin-top: 0.625rem;
-  margin-bottom: 1.5rem;
+  margin-left: -0.4375rem;
+  margin-right: -0.1875rem;
 }
 
 @media (min-width: 768px) {
-  .course img {
-    width: 29.375rem;
+  .bi-arrow-right-short {
+    font-size: 2.125rem;
+    margin-left: -0.5rem;
+    margin-right: 0;
   }
+
+}
+
+.bi-arrow-right-short::before {
+  margin-top: 0.8125rem;
+}
+
+.course span {
+  font-size: 1.25rem;
+  vertical-align: bottom;
+}
+
+
+
+@media (min-width: 768px) {
+  .course img {
+    width: 33.25rem;
+    height: 20.625rem;
+  }
+
 }
 
 
@@ -655,13 +815,25 @@ h3 .big-numbers {
 
 /* 費用
 ------------------------------------------ */
-.cost .container {
-  padding-top: 3.75rem;
-  padding-bottom: 4rem;
+.cost .section-title {
+  margin-left: 1rem;
 }
 
 @media (min-width: 768px) {
+  .cost .section-title {
+    margin-left: 0;
+    margin-bottom: 1.625rem;
+  }
+}
+.cost .container {
+  padding: 3.75rem 1rem 4rem;
+}
+
+
+
+@media (min-width: 768px) {
   .cost .container {
+    padding: 4.1875rem 0 44.125rem;
     width: 37.5rem;
     height: 39.3125rem;
   }
@@ -671,11 +843,19 @@ h3 .big-numbers {
 
 .collapse{
   border-collapse: collapse;
+  margin-top: 0.9375rem;
 }
 
 thead {
   background-color: #F5F5F5;
-  height: 4.0625rem;
+  height: 4.125rem;
+}
+
+@media (min-width: 768px) {
+  thead {
+    font-size: 1.125rem;
+  }
+
 }
 
 .border-right-none {
@@ -684,6 +864,13 @@ thead {
 
 .border-left-none {
   border-left: none;
+  padding: 0 1.625rem 0 0.8125rem;
+}
+
+@media (min-width: 768px) {
+  .border-left-none {
+    padding: 1.4375rem 84px;
+  }
 }
 
 
@@ -692,17 +879,42 @@ table{
   width: 100%;
   line-height: 1.65;
 }
+
+
+@media (min-width: 768px) {
+  table {
+    width: 600px;
+    height: 545px;
+  }
+}
+
 table th,
 table td{
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 0.5275rem 1.1875rem;
   font-weight: 400;
+}
+
+
+
+@media (min-width: 768px) {
+  table th {
+    font-size: 1.125rem;
+  }
+
 }
 
 table td {
   color: #F23397;
   font-size: 28px;
   text-align: center;
+  padding-left: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+  table td {
+    font-size: 2rem;
+  }
 }
 
 .yen {
@@ -711,6 +923,16 @@ table td {
   font-family: noto sans jp;
 }
 
+@media (min-width: 768px) {
+  .yen {
+    font-size: 1.125rem;
+  }
+}
+
+.position-change {
+  padding-left: 1rem;
+  padding-bottom: 0.3125rem;
+}
 
 
 
@@ -738,6 +960,8 @@ table td {
 
 .qa img {
   filter: brightness(0.7);
+  width: 24.375rem;
+  height: 10.625rem;
 }
 
 @media (min-width: 768px) {
@@ -745,9 +969,12 @@ table td {
     width: 960px;
     height: 320px;
   }
-  .qa img:hover {
-    transform:scale(1.2);
-    transition:1s all;
+  .qa-image img {
+    transition: all .5s;
+  }
+  .qa-image:hover img {
+    transform: scale(1.2, 1.2);
+    transform-origin: center center;
   }
 }
 
@@ -776,12 +1003,14 @@ table td {
   .classrooms .title {
     font-size: 2rem;
     top: 8.25rem;
-    left: 23rem;
+    left: 21rem;
   }
 }
 
 .classrooms img {
   filter: brightness(0.7);
+  width: 24.375rem;
+  height: 10.625rem;
 }
 
 @media (min-width: 768px) {
@@ -795,7 +1024,13 @@ table td {
 /* フッター
 ------------------------------------------ */
 .footer {
-  padding: 1.75rem;
+  padding: 1.5625rem 0.9375rem 1.875rem 1.75rem;
   background-color: #DDDDDD;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.625rem 0;
+  }
 }
