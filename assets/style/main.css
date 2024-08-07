@@ -74,7 +74,6 @@ ul {
 
 @media (min-width: 768px) {
   .button {
-    max-width: 10rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.5rem;
@@ -84,7 +83,15 @@ ul {
 
 /* ヘッダー
 ------------------------------------------ */
-.header {
+@media (min-width: 768px) {
+  .header {
+    width: 100%;
+    height: 6.3125rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.header-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -95,17 +102,18 @@ ul {
   justify-content: space-between;
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 24.375rem;
 }
 
 @media (min-width: 768px) {
-  .header {
-    width: 120rem;
+  .header-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
     height: 6.3125rem;
-    padding: 0 22.5rem;
+
   }
 
-  .header a {
+  .header-container a {
     color: #fff;
   }
 }
@@ -118,7 +126,7 @@ ul {
 
 
 @media (min-width: 768px) {
-  .header img  {
+  .header-container img  {
     width: 15.0625rem;
     height: 2.8125rem;
     margin-left: 0.3125rem;
@@ -239,6 +247,12 @@ ul {
   }
 }
 
+@media (max-width: 1100px) {
+  .hamburger-nav-list a {
+    font-size: 0.625rem;
+  }
+}
+
 /* 右矢印アイコン */
 @media (max-width: 767px) {
   .hamburger-nav-list a::before {
@@ -276,6 +290,12 @@ html {
 }
 
 
+@media (min-width: 768px) {
+  .main {
+    margin-top: 0;
+  }
+}
+
 /* カバー
 ------------------------------------------ */
 /* カバー画像 */
@@ -293,31 +313,25 @@ html {
   .cover {
     background-image: url("/assets/image/cover_mainvisual_pc.jpg");
     height: 43.125rem;
+    margin-top: -1.1875rem;
+    margin-bottom: 5rem;
+    background-position: center;
+    background-size: 100%;
   }
 }
-
-@media (min-width: 768px) {
-  .cover {
-    margin-top: 3.875rem;
-    margin-bottom: 6.25rem;
-  }
-}
-
 
 
 /* カバーテキスト */
 .cover-content {
-  position: absolute;
-  top: 4.625rem;
-  left: 0.9375rem;
+  padding: 20% 4%;
 }
 
 @media (min-width: 768px) {
   .cover-content {
-    top: 9.0625rem;
-    left: 25.6875rem;
+    padding: 6.5% 21.5%;
   }
 }
+
 
 
 .cover-top-group {
@@ -422,35 +436,50 @@ html {
 /* ナビゲーションボタン
 ------------------------------------------ */
 .navigation {
-  position: absolute;
-  top: 19rem;
-  left: 3.9375rem;
+  margin: -7% -1%;
 }
 
 @media (min-width: 768px) {
   .navigation {
-    top: 40.8125rem;
-    left: 25.5625rem;
     font-size: 1.5rem;
+    margin: -1% 21%;
   }
 }
 
+
+
 /* ナビゲーションボタン */
 .navigation .button {
-  max-width: 15.625rem;
+  width: 15.625rem;
+  height: 3rem;
   padding: 0.5625rem 3.3125rem 0.6875rem;
   margin: 10px auto 12px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1500px) {
   .navigation .button {
-    max-width: 100%;
-    padding: 1rem 3.9375rem;
+    width: 15.625rem;
+    height: 3rem;
+    padding: 0.5625rem 3.3125rem 0.6875rem;
+    margin: 10px auto 12px;
+    font-size: 1rem;
+  }
+
+}
+
+
+@media (min-width: 1500px) {
+  .navigation .button {
+    width: 21.25rem;
+    height: 4.6875rem;
+    padding: 1rem 3.875rem;
     margin: 0;
+    max-width: 100%;
   }
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 1500px) {
   .navigation-button {
     margin: 0;
     display: flex;
@@ -458,6 +487,9 @@ html {
     column-gap: 2.375rem;
   }
 }
+
+
+
 
 .button-green {
   background-color: #77CB33;
@@ -471,11 +503,7 @@ html {
   background-color: #3AC8AD;
 }
 
-@media (min-width: 768px) {
-  .button-mossgreen {
-    width: 21.375rem;
-  }
-}
+
 
 
 
@@ -487,9 +515,16 @@ html {
   padding: 0 1rem;
 }
 
+@media (min-width: 400px) {
+  .reason .container {
+    padding-top: 8rem;
+  }
+}
+
 @media (min-width: 768px) {
   .reason .container {
-    padding: 0 23.75rem 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0;
   }
 }
 
@@ -508,8 +543,21 @@ html {
   margin-top: 0.625rem;
 }
 
+@media (max-width: 1000px)  {
+  .reason-group {
+    flex-direction: column;
+  }
+  .reason2-group {
+    flex-direction: column;
+  }
+}
+
+
 @media (min-width: 768px) {
   .reason-group {
+    max-width: 72.5rem;
+    width: 100%;
+    margin-inline: auto;
     display: flex;
     margin-bottom: 3rem;
   }
@@ -650,7 +698,11 @@ h3 .big-numbers {
 
 @media (min-width: 768px) {
   .course .container {
-    padding: 4.125rem 23.75rem 4.5rem;
+    width: 100%;
+    max-width: 72.5rem;
+    margin-inline: auto;
+    padding-top: 4.1875rem;
+    padding-bottom: 4.4375rem;
   }
 }
 
@@ -773,6 +825,8 @@ img.expansion {
 
 
 
+
+
 /* タイトル */
 .bi-arrow-right-short {
   font-size: 1.75rem;
@@ -800,17 +854,23 @@ img.expansion {
   vertical-align: bottom;
 }
 
-
+.expansion {
+  overflow: hidden;
+}
 
 @media (min-width: 768px) {
   .course img {
     width: 33.25rem;
     height: 20.625rem;
   }
-
+  .course-tab-content-title {
+    transition: all .3s;
+  }
+  .course-tab-content-title:hover img {
+    transform: scale(1.2, 1.2);
+    transform-origin: center center;
+  }
 }
-
-
 
 
 /* 費用
@@ -940,6 +1000,7 @@ table td {
 ------------------------------------------ */
 .qa {
   position: relative;
+  overflow: hidden;
 }
 
 .qa .title {
@@ -953,14 +1014,14 @@ table td {
 @media (min-width: 768px) {
   .qa .title {
     font-size: 2rem;
-    top: 8.25rem;
-    left: 23rem;
+    top: 41%;
+    left: 38%;
   }
 }
 
 .qa img {
   filter: brightness(0.7);
-  width: 24.375rem;
+  width: 100%;
   height: 10.625rem;
 }
 
@@ -970,15 +1031,13 @@ table td {
     height: 320px;
   }
   .qa-image img {
-    transition: all .5s;
+    transition: all .3s;
   }
   .qa-image:hover img {
     transform: scale(1.2, 1.2);
     transform-origin: center center;
   }
 }
-
-
 
 @media (min-width: 768px) {
   .qa-classroom-group {
@@ -989,6 +1048,7 @@ table td {
 ------------------------------------------ */
 .classrooms {
   position: relative;
+  overflow: hidden;
 }
 
 .classrooms .title {
@@ -1002,14 +1062,14 @@ table td {
 @media (min-width: 768px) {
   .classrooms .title {
     font-size: 2rem;
-    top: 8.25rem;
-    left: 21rem;
+    top: 41%;
+    left: 35%;
   }
 }
 
 .classrooms img {
   filter: brightness(0.7);
-  width: 24.375rem;
+  width: 100%;
   height: 10.625rem;
 }
 
@@ -1017,6 +1077,13 @@ table td {
   .classrooms img {
     width: 960px;
     height: 320px;
+  }
+  .classrooms-image img {
+    transition: all .3s;
+  }
+  .classrooms-image:hover img {
+    transform: scale(1.2, 1.2);
+    transform-origin: center center;
   }
 }
 
