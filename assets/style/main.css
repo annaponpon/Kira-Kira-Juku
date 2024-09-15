@@ -666,22 +666,48 @@ h3 .big-numbers {
 }
 
 /* ボタン */
+/* 既存Webサイトの修正_CTAボタンを追加 */
+.admissions-information-session__button {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .admissions-information-session__button {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+}
+
 .button-blue {
   background: linear-gradient(to right, #0271E0, #53A2F0);
-  max-width: 19.0625rem;
+  width: 19.0625rem;
   padding: 1.0625rem 1.0625rem 1.0625rem;
-  margin: 0.625rem auto 0;
+  margin: .625rem auto 0;
+  font-size: 1.25rem;
+}
+
+.button-free-trial {
+  background: linear-gradient(to right, #f6aa00, #f0c465);
+  width: 19.0625rem;
+  padding: 1.0625rem 1.0625rem 1.0625rem;
+  margin: .625rem auto 0;
   font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .button-blue {
-    max-width: 22.375rem;
+  .button-blue,
+  .button-free-trial {
+    width: 22.5rem;
     padding: 1rem 0;
     font-size: 1.5rem;
     margin-top: 1.125rem;
+    margin-inline: 0;
   }
-  .button-blue span {
+
+  .button-blue span,
+  .button-free-trial span {
     margin-left: 1.375rem;
   }
 }
